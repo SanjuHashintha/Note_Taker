@@ -5,7 +5,7 @@ import {
   deleteNoteById,
   getNotes,
   updateNote,
-} from "../controllers/Notes.js";
+} from "../controllers/notes.js";
 import { adminMiddleware, requireSignin } from "../middlewares/index.js";
 
 const router = express.Router();
