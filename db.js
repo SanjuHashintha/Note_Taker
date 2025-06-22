@@ -17,10 +17,7 @@ const connectDB = async () => {
 
   if (!cached.promise) {
     cached.promise = mongoose
-      .connect(DB_URL, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-      })
+      .connect(DB_URL)
       .then((mongoose) => {
         console.log("✅ Database Connected");
         return mongoose;
