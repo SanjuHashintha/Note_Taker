@@ -26,7 +26,7 @@ app.use("/api", categoryRouter);
 app.use("/api", tagsRouter);
 
 app.get("/", (req, res) => {
-  res.send("Hello from Express with sdsdsssss!");
+  res.send("Hello from Express with vercel!");
 });
 
 export default serverless(app);
