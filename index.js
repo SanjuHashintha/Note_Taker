@@ -11,12 +11,16 @@ import categoryRouter from "./routes/categories.js";
 import tagsRouter from "./routes/tags.js";
 
 dotenv.config();
-connectDB();
 
 const app = express();
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
 app.use(cors());
+
+app.use(async (req, res, next) => {
+  await connectDB();
+  next();
+});
 
 app.use("/api", authRouter);
 app.use("/api", usersRouter);
